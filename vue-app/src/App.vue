@@ -1,18 +1,18 @@
 <template>
   <div id="app">
-    <CardView/>
+    <!-- <CardView/> -->
     <SnapToGrid/>
   </div>
 </template>
 
 <script>
-import CardView from './components/CardView.vue'
+// import CardView from './components/CardView.vue'
 import SnapToGrid from './components/SnapToGrid.vue'
 
 export default {
   name: 'App',
   components: {
-    CardView,
+    // CardView,
     SnapToGrid
   }
 }

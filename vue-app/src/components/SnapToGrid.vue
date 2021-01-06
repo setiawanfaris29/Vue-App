@@ -10,8 +10,8 @@ export default {
 
 var width = 960,
   height = 500,
-  resolution = 20,
-  r = 15;
+  resolution = 10,
+  r = 10;
 
 var points = d3.range(10).map(function() {
   return {
@@ -30,9 +30,9 @@ var drag = d3.behavior
 var svg = d3
   .select("body")
   .append("svg")
-  .attr("viewBox", `0 0 300 600`);
+  .attr("width", `0 0 300 600`)
   // .attr("width", width)
-  // .attr("height", height);
+  .attr("height", height);
   // .attr("width", `0 0 300 600`)
   // .attr("height", height);
 
@@ -107,6 +107,16 @@ function round(p, n) {
 </script>
 
 <style scoped>
+
+body{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  position: relative;
+  align-content: center;
+  justify-content: center;
+}
+
 svg {
   box-sizing: border-box;
   border: 1px solid rgb(112, 112, 112);
@@ -114,7 +124,7 @@ svg {
 
 circle {
   stroke: rgb(95, 176, 228);
-  stroke-width: 2;
+  stroke-width: 1;
   fill: rgba(205, 246, 255, 0.3);
 }
 
